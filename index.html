@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#faf6ef">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="家庭菜谱">
+<meta name="format-detection" content="telephone=no">
+<title>家庭菜谱收藏夹</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23c2542a'/><path d='M14 30h36c0 10-8 18-18 18S14 40 14 30Z' fill='white'/></svg>">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoi5a625bqt6I+c6LCx5pS26JeP5aS5Iiwic2hvcnRfbmFtZSI6IuWutuW6reiPnOiwsSIsImRlc2NyaXB0aW9uIjoi5oqK5a626YeM55qE5ZGz6YGT77yM5aW95aW95pS26LW35p2lIiwic3RhcnRfdXJsIjoiLi8iLCJzY29wZSI6Ii4vIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJvcmllbnRhdGlvbiI6InBvcnRyYWl0IiwiYmFja2dyb3VuZF9jb2xvciI6IiNmNmYxZTkiLCJ0aGVtZV9jb2xvciI6IiNjMjU0MmEiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFMUUFBQUMwQ0FJQUFBQ3lyNUZsQUFBTzdrbEVRVlI0bk95ZGVXd2MxUm5BdjVuWnk3RmpZaE1IUVVJaERxRkpnSVNyb2xCSVFWUkZxU2dTRUVRclZHaWtvUElQSU5RSUFSVVZSMUVyb0swSWd0S2lBQzNRaXBRQ1JZVVNwSUJxeU1tUllDZHBEaWRPSE1kMllqdDI3UFVlYy9hYjNkZzFzL3RtWjY4M3gzNi9XQ3Q3ZGphejgvYTMzL3ZlTVc5Q2Jjc1hBVUhrUXdTQ1lFQnlFRXhJRG9JSnlVRXdJVGtJSmlRSHdZVGtJSmlRSEFRVGtvTmdRbklRVEVnT2dnbkpRVEFoT1FnbUpBZkJoT1FnbUpBY0JCT1NnMkJDY2hCTVNBNkNDY2xCTUNFNUNDWWtCOEdFNUNDWWtCd0VFNUtEWUVKeUVFeElEb0lKeVVFd0lUa0lKaVFId1lUa0lKaVFIQVFUa29OZ1FuSVFURUpBNUNNOFkyYnJiZmMwTGY0Mi9qN2N2dm5BNjZ1VmtVR29NVWlPL015NzQrY3RWMXlYL1gzVzB1dUZVSGozTXc5Q2pVRnk1S2Y1NHF1bS90bDB3V1ZRZTVBY2VZZzB6NUppMDZadXdjZ0J0UWZKa1lmRytSZFl0c2pIajBIdFVWdHk2SWF1YXdhQ0Q3cVJCY3gvNWxQNEtHVDJNbWFmdmREeXdyR0RlMVJWRTBWQkZHdW9mUmRrT1NaYkhQaXhEMjdmdVBPbHA5TERRK3pkczJhQUdJbk52dWFIbHVmNnQyMGFsNVhNcjBaSUVzT2loSThzVVFMVDBnbW1IQmdRVkUyYi81UDdabDI1TEx2bGpLdHZBQ24wNVpPckNyNzJuT1VybzAwdGxvMkQ3VnNtZmhWVURmOXpGUlN6anlna29TVUNQZ3FDTUxsellGbzZRWk5EMDNWRjB4UlYwdzJZZWNuU3FVL05YSEo1d1pkSG0yYk9XMzZuWmVPSi9ic1NmZDI1Tyt1WWkyaWFySUVvYUJFTUo1bGdBZ0ZxNlFSRURrd2hGRldYTVZ5WXFZTkp0SGxXcUs1KzZqNWlxUERKTGxwNXZ4U09XRGJ1ZVcyMS9hc3dYMG1wV2twUlVZK0dtYWRiV3pxU1h3dlo5M0pnRFlKT3BGVjF3b3FUTkMxY1l0a3pOVFJnLzE4MUxiaHc5dExyTFJ1SDk3UWYrN3dObkNBSXFtN0U1cDluMlN3UEQ0QS84YkVjR0Mxa1ZVOHJpZ0ZDN3JOTjUxcmxHRDIweCs2L0U4VWw5ejZSdTduanVVZWdHSEtQRysvZUIvN0VuM0prb2dXRzhVeXd5R09HR0luT3lXbHhERzdmYlBOZnpyN3lCdzF6NWxvMjluejh6OUd1M2VDWXZNY2QycjRKM3pBSUF2Z04vOG1CS1djaXJlaVdXdVRyekwvbHp0d1d4MURIVnB1WHRONjh3ckpGVjVYZHIvd2VpaUh2Y2Z1MmIwNm01R25Sc09TM1BoSS95YUhyV0lsb3NxcmFmd3V4eGRGNjgwckxSbXh4alBjZVlyMmtmdmJacDdSYU83NjYzbjAxVlV6SHFQMXg0OGwwSkN4RlF5RWZkYVA1Umc1c25DYlNzaGt1Q3NYbkVsb2NzeTVkYWoxY010NzU5ejlCTVJRNHJpQmdocVNvR0VJaTJLZ0JQK0NEZDRuZDIybFpHVStuRFFjN2w5YmlPTzFiVjF1MjlIN3lnUklmQmNjNFBDNmVBcDVJQ2p0YkRTZG40ekplanh5WVcyREFNTHUwd0VGQ1YycUxvM0h1dVpZdFF6cytCK2NVZDF3aGpmMHh1bEVYRFl2ZXpsSTlIVGt3OTR5bjBoa3pIRkZ5aXlQUzJHelpNdFMrRlJ4VHduSFZrNmVtZzRmeHJoeVlaTVJUY2xIUnQrUVdoenc2YlBrek5kUVBqaW50dUhocWVJSjRtdUJWUENvSERvNk1wK1dpWGxJLys2eDhMWTYvT0dseERINjE2V3QvYnQ4SWppbm51R0NtSURLZUxIZ1NMK1ljYVVYRkRpNG9rbG1YZnRleVJSMGYyN2ZXVVl0ajU0dS9NWFM5NWNMTERkMFkyUGJwcnBkL0M0NHA1N2haRXJJU000eG8ySE9maGVmZVVGcFdVMnJSWmtEZUZzZUdkZmc1Z1FQU3c0UGJucjRmU3FLYzQwNWlmaGtNd0VZdWVBbHZWU3RtcDNoSlprRDVMWTVTcWRSeDhjUmxqOVV2SHBKRDBiVGt5ZGxXcFJCdW1HSFpNcml0aU5UQkM4ZkYwL2RVL3VFVk9USWRvS1diZ1NqeEUxUC94QlpIbXN2a3ZNb2VOMkdtcDE1cHYzaENqbXhQRjVSSE9TME9UeDBYaTBMM1J2K3B0R0pSQzdpS1lacWhsRjhjeDNkOUdXdHVpVFdkcWlZVC9acyszTG5tS1MyVmhPcFRqZU5pdngrTzRRcHU5NThLYmNzWGdhdVUxbkFOUExGd3lQWEdyY3ZWQ3RhdlpFWmVzRmh3QkFaY3hVMDVLcEpxQkppSzFMYmw0S1ljMkhMendiaTFleGlaSWdMM2NFME9qSmxlSG5QeUNGaEVMbFl1N3NpQkxaU2tUS21HSTdDZ0RKY3FGM2Zra0JYTkkwMTU3NE1GaGNVRmJ1Q0NITHB1bER5QVVwdGdjYm55WFhKQkRqS2pCRnhwOFBPV0E3OEJucDNiNG1YTUVSZWRkL0RnTFVlYXVyeEtKYzA5NG5LVkkzdlJNeEFsZ1VYSHVkbkNWUTYzc3U3QXdMa0ErY21CMXFmZEhpendPN0xHdFdiaEo0ZVpVRkhmUm5sZ1NzcnpVaGQrY2lncWRaWlhBSjQxQ3ljNU1HWW9WS2RVQWtYamw1Wnlrc05jckF1SUNtQUF2NXFGa3h3S0RjQldEbTRWTktlSmFKT3l6NzdtaHRNdnUzYkdnc1d4VTA4RHdobXBvYU1qdTl2N3Rxdy84dkc3WUY2RWpSVTBqN1hZZWN3aDFYVjlMQ1hYdFp5KytPN0hXaTc2RGhDbE1yQnRRL3V6djB3TzlFMlBSVGlzRU1TaldsRXpZZU9pVlUrUkdXV0NCWGpScWlkaG9raXJEUmM1TlAzTWEyOXNYblF4RUdYVHZPZ1NMRXcraytoNHlJRUp4eGxYTFFPaVFtQmhhc0dJSE5ndml2MTZqYTBMZ0tnUVdKaFlwQnhHOEtzdVIvWnVKa1RGNFZDd0hDS0hHUUJIRHhTeERqQmhUN1l3OWVyWExOV1hJK1Azb1EvZUFLSkNaQXVUdzd5d3FzdVJUWjM2TjY4ZitPSlRJTW9HU3hKL2dFc25ldlZ6am9sUm9oMHYvbHBUNk9MSHNsQ1Q0enRlK0ZYMmR3N0RiMVh2SWJVc0pFcmQ1eVZnNlQ3UElvbENReXdLMWFUcWNvd2xVM2xyeHdWMzNIZE96ZzJ6aUZ3NjMzeHg5NS96TEdrcUNkQlFGNE5xNHRvS0VQR2VMaUFjd0Nvb0RqMEUvSElPQzhsalI0QndBRk1Pdy8vOUhHRGtYN3VJSW9kRDRqMEg4ajloVkgxUktOZVdZRWdQRDFMd0tBZ1dVYkhyM1ZhUTZzdkI5dHYrdmxvRTJCZVJFSUJxaFowNURYWjhCb1F0TmtYRVlhM0Jxc3RoY3c0VU9RcmliaEc1S1VmeVdDOE55Tm1BaFlORnhIbzJDSkhEbnQ1UC9nMEVBL3ZDNGJDQWJmVW5xZG9LM3J0aEhWMGptUmNzRml3Y214MkNFRG5zNzdTYjZPcytzYmNkaUJ5d1dMQndiSGFRQlAvUFBoY0wrZDIvK1NNZ2NqalNWcURDNVhEdjR1ckxVZWdrcUdiSkJRdmtTTnQ3OXZ1SWdZZ2NCVUlIQnMvdWRXdUJtQUlXaUR3eVpMK1BLQWFpbjBNcWRCWUgzbjVGMTJpdHNKTmdVZXgvNjJYN2ZiQklBOUtVbFVUSmZvZngza1A5R3o4RUlnTVdoWDBxQ2c2S3RDTHdrQ01rRlhZY3Z5dVVlVUFtMitoOGMwM0IzWndVYWZsd2lSeFNZYzFQZE83cys1UTZ4T0RJUisrTUh2aHZ3ZDJjRkduNThKQURjMUlueWRPdWw1NVdFK05RdzZqSjhaMXJuaXk0RzBZTlVRaEs1SUJDWFdGWlVvUDllMTUvRm1xWVBhODlxNHlkS0xnYm40UUR1TWtSbGh3ZHFPdGZyNDNzN1lDYVpLUnpKNTYra3ozRElVNmZHcWZEaENSbkdaU3ViMy9tSVMzTjQ2Nk9uZ0pQZWZ2dkhnQUgxeWtKenNKd1JlQjBHR3lVaDUzbFVQSHUvUjEvZUJ4cUREemwrT0g5VHZiRVl1UjJTMUYrUS9iT2cySFArbmQ2UDNrZmFvYWU5Vy9qS1R2Y09STG1sSEFBVHprd0dEclBzZHVmZXpSeHRDYW1INDkxZDdZLzd6UlNZcU9QVzUwQ1BPWEFZQmdKT2JWZUhSL2Irc2pQVXNjSElOQ2toZ2UyUG5xWExxY2M3aDhKY2IwSWpldE1NT2R5UU9aNmpjMi9XQkZnUDlDTVRRLysxR1lpWUM1RkZXRDVjSldqcU9BQkUzN0lZeU1RT0xKbWpCOHA0c3F1V0RqRStlNzJ2T2VRUm9zTWpPakhsb2RYQnN3UFBKMWl6UUR1WVFQNHk0RkphYmpJa3p5eGYxZmJQVGZoeUMwRWd2Rys3cmE3Ynl6YURJNHQyRWxjbUgwZUt6NnJ3cDcxRGZmZk51ei8yYVlqKzNac1dQWGoxTkJSS0pKb3hJWDFFRnlRQTROSENYN0lKNDV2Zm1qRllQc1c4QzNIUG0vYitNRHQ4dWd3RkFrV2w4ZzliQ0RTaWtVdHdCMUpGQlN0NkJYUERFMDk4cC8zd05DYno3dEVFRnpRdW1RTVhldDg0NFdPNXg4ejFLSVh2a0l0NnFKaG9YYmtNT2NPWnZ5QVlqSDBvWTdQQnIvYTBuTGg1ZUg2NmVBSGtrTkhzYyttNStOMzhjMUQ4VXlMaG5sMmZFM0ZIVGtnTXl0ZDA3VFMxa3RNRGZZZC92QXRLVmJYTlA5OGNPTXI1UlJkUC9qKzM3NTQ0dDVFZjNkSnI4Y0JTekVXNW5IM2pMend1S1VHQzkwd3hwSnBLSVBHMW9WTDdubjhsSG11bllJTjJNajZhdlhEVHFaMTJUQzlMaXE2WjcrYmNrRG1MdHdKV1lGeUVJU3psdDI2OFBiN1FwNnBaZFRFMk81WFZ4OTg3NjlRM3F6WWFaRndtSHZmeGxSY2xnTkpwaFc1N0hzRFJocWJ6cm5senJPVy9VaUtWbmVCUFh1MGRLcjdnN1g3MXY2eGhDYUpCZXpZd0R3VVhNVjlPUXpEaUtka3ZSSlR6Nk5OTGZOdVd1R0tJbGt0T3YreEpqMWNnY0Vnek5icm94SEI3WFRLZlRrZ3MxSXorZ0VWQWhXWmYrdGQzN2p1WmpFVWdlcFRXUzJ5VEk5Rk9WelFWaEJQeUFHWjI2VW0wdVVsSHprMG4zL3BtZCs3OFl3cnZpL1YxVU9sMFZLSnZnM3JEcTkvWjZqU2kxZGgyelVzdVpscVRPSVZPUkJaMVpKeWhmMUFoRkM0Y2U0M204NjlZQWIrekYvY01HZHVpYTFmclA1NnVrYjJ0WS9zN1JqZTJ6SGF0Y2RRSy85dTZ5TGhTTWdUWm9DbjVFRFNpcHBTcW52UnJCaUpOc3hwemZ5YzNYQm1hMnhHUzdpaE1WUlhMOVZOdzZ3V2Q4QmNVa3NtMU9TNEVoOU5qUXlNOTNURkR4K005M2FOZFhmcWNsa043NExnb0h3MDdOcWEwcmw0U3c0a0xhc3B0Ull2cXNZQkZGZEcxMnp3MXJ1QjdQQ2pBTldPSDE3RGF6RWppK2ZlRUJJMXB6eEJVcTRWUDF6djdHTGgwYkhOU0NnMHplMHVJRDZZYlJOUG1nR2VsUU15Vis5Z1J4QUVGMnd5NFFsNnBOV2FGMC9QaXNBeHlZWllSUFR5dUd1cDRFblZ4N0RSNnVueTkvcVVHVWtVcDhjaVp0TS9NRXU3R0FhZURwNlVXN00wbk9QRmhOU0tJR0RYRUg3SmNJak83NEpnREt5TGVib3FtWW9mNU1pQUJTclZpZGdMSW1NdmlCOHJHc05Bd2JISktubytZRXppR3psZ1lqWWxGakgyc3V1K3FtVXk3OXpyR1VZdWZwSWpTelpMeFlFWWpDS0c1eU9JWUdDM25tUmV5dVhEYU9jL09TQXpQeGs3eXZDYmFDcWlxTjZNSVVMbUdyVW85MnNZSzRndjVjanlmMFVVTGExNlNCR1VBVU1GdmpIL2FwSEZ4M0prTVJXSjRNQ0VwR2c2anNpNG00dGdiaEVMU2FHd3VjQXcrQi9meTNFU3did0VGMzgwWFZkVVRTbjFvb2ZTUUNldzF5SVVrcnpmZFZFVVFaRmpBdng0cElnWWc3Q3FhYXFtNDQ5V3RWZ2ltZ3VkaVNIenh4LzlGc1VTTkRrbXdROHMrNWtaaG9IaEJFT0phdUJqV2FhWUsvbEpnaVNZUWtqbUlsWUI3TmVmU21EbG1BUS93cXdvMGN5ZjZJcXFaekV3UVVGWkREajVPSEhmTkNNN21wTzlNWUc1L0RKR0kxR29CUnNzQkY4T0N5Y1h2UXhvUlZCWkFwVkFFWldGNUNDWWtCd0VFNUtEWUVKeUVFeElEb0lKeVVFd0lUa0lKaVFId1lUa0lKaVFIQVFUa29OZ1FuSVFURWdPZ2duSlFUQWhPUWdtSkFmQmhPUWdtSkFjQkJPU2cyQkNjaEJNU0E2Q0NjbEJNUGtmQUFBQS8vK1dZVDNJQUFBQUJrbEVRVlFEQUtEYWtwVFBBbjFJQUFBQUFFbEZUa1N1UW1DQyIsInNpemVzIjoiMTgweDE4MCIsInR5cGUiOiJpbWFnZS9wbmciLCJwdXJwb3NlIjoiYW55In1dfQ==">
+<style>
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+
+  :root {
+    --bg: #f6f1e9;
+    --panel: #fffdf9;
+    --ink: #2d2722;
+    --ink-soft: #5d534b;
+    --muted: #8f837a;
+    --line: #e7ddcf;
+    --brand: #c2542a;
+    --brand-dark: #a4431f;
+    --brand-soft: #fbe9df;
+    --danger: #b23a2e;
+    --radius: 18px;
+    --shadow-sm: 0 1px 2px rgba(70, 48, 24, .05), 0 4px 14px -8px rgba(70, 48, 24, .16);
+    --shadow-md: 0 14px 34px -16px rgba(70, 48, 24, .38);
+  }
+
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background:
+      radial-gradient(1100px 560px at 8% -12%, #fdf7ee 0%, rgba(253, 247, 238, 0) 62%),
+      radial-gradient(900px 520px at 102% -6%, #f2e7d9 0%, rgba(242, 231, 217, 0) 58%),
+      var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  body.modal-open { overflow: hidden; }
+
+  button, input, select, textarea { font-family: inherit; }
+
+  /* ---------- header ---------- */
+  .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    padding-top: env(safe-area-inset-top);
+    background: rgba(250, 246, 239, .88);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(231, 221, 207, .9);
+  }
+  .header-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 14px max(22px, env(safe-area-inset-right)) 14px max(22px, env(safe-area-inset-left));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .brand-mark {
+    width: 42px; height: 42px; flex: none;
+    border-radius: 14px;
+    display: grid; place-items: center;
+    color: #fff;
+    background: linear-gradient(140deg, #d9693a, #a8421e);
+    box-shadow: 0 8px 16px -8px rgba(168, 66, 30, .8);
+  }
+  .brand-text { min-width: 0; flex: 1 1 auto; }
+  .brand h1 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: .4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand p { margin: 2px 0 0; font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .header-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--ink);
+    background: transparent;
+    cursor: pointer;
+    transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn svg { flex: none; }
+  .btn.primary {
+    background: var(--brand);
+    color: #fff;
+    box-shadow: 0 8px 18px -10px rgba(194, 84, 42, .9);
+  }
+  .btn.primary:hover { background: var(--brand-dark); }
+  .btn.primary:disabled { opacity: .7; cursor: default; }
+  .btn.ghost { background: transparent; border-color: var(--line); color: var(--ink-soft); }
+  .btn.ghost:hover { background: #fff; border-color: #dccbb8; }
+  .btn.danger { color: var(--danger); border-color: #ecd4cf; }
+  .btn.danger:hover { background: #fdf1ef; border-color: #e3bfb8; }
+  .btn-compact { padding: 9px 13px; }
+  .btn:focus-visible, .icon-btn:focus-visible, .chip-btn:focus-visible, .row-del:focus-visible, .clear-btn:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+
+  /* ---------- toolbar ---------- */
+  .toolbar {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 22px max(22px, env(safe-area-inset-right)) 6px max(22px, env(safe-area-inset-left));
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .banner {
+    background: #fdf0e8;
+    border: 1px solid #f0d3c2;
+    color: #8a3f1d;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 48px;
+    padding: 0 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color .18s ease, box-shadow .18s ease;
+  }
+  .search-box:focus-within {
+    border-color: #d8bda4;
+    box-shadow: 0 0 0 4px rgba(194, 84, 42, .08);
+  }
+  .search-box > svg { color: var(--muted); flex: none; }
+  .search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--ink);
+    font-size: 16px;
+  }
+  .search-box input::placeholder { color: #b3a79d; }
+  .clear-btn {
+    flex: none;
+    width: 26px; height: 26px;
+    border: 0;
+    border-radius: 50%;
+    background: #f1e9df;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .clear-btn:hover { background: #e8dccd; color: var(--ink); }
+
+  .toolbar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+  }
+  .chips {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 2px 2px 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip-btn {
+    flex: none;
+    padding: 7px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .16s ease, color .16s ease, border-color .16s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .chip-btn:hover { border-color: #d9c6b1; color: var(--ink-soft); }
+  .chip-btn.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #fff;
+  }
+  .sort-select {
+    flex: none;
+    width: auto;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 9px 32px 9px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238f837a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    color: var(--ink-soft);
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  /* ---------- list ---------- */
+  .list-area {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 4px max(22px, env(safe-area-inset-right)) 40px max(22px, env(safe-area-inset-left));
+    min-height: 46vh;
+  }
+  .result-bar {
+    padding: 4px 2px 12px;
+    font-size: 13px;
+    color: var(--muted);
+    min-height: 8px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: left;
+    background: var(--panel);
+    border: 1px solid rgba(231, 221, 207, .85);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .card:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .card-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5eadd, #e8d7c2);
+  }
+  .card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .card-media .ph {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: #c2ab90;
+  }
+  .card-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .card-body h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 650;
+    line-height: 1.35;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .tag {
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .empty {
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 40px 28px;
+    text-align: center;
+    color: var(--ink-soft);
+    background: rgba(255, 253, 249, .7);
+    border: 1px dashed var(--line);
+    border-radius: 24px;
+  }
+  .empty .empty-icon { color: #c6ae92; }
+  .empty h3 { margin: 14px 0 6px; font-size: 18px; color: var(--ink); }
+  .empty p { margin: 0 0 20px; font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+
+  .footer {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 max(22px, env(safe-area-inset-right)) 34px max(22px, env(safe-area-inset-left));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .footer .warn { color: #a4551f; font-weight: 600; }
+
+  /* ---------- overlay / sheets ---------- */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(43, 33, 25, .46);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+  .sheet {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 760px;
+    max-height: min(88vh, 920px);
+    max-height: min(88dvh, 920px);
+    background: var(--panel);
+    border-radius: 22px;
+    box-shadow: 0 30px 90px -24px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    animation: sheet-in .22s ease;
+  }
+  @keyframes sheet-in {
+    from { opacity: 0; transform: translateY(14px) scale(.99); }
+    to { opacity: 1; transform: none; }
+  }
+  .sheet-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 24px 14px;
+    border-bottom: 1px solid var(--line);
+    flex: none;
+  }
+  .sheet-head h2 { margin: 0; font-size: 18px; font-weight: 700; }
+  .sheet-body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 24px 24px;
+  }
+  .sheet-foot {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: rgba(255, 253, 249, .96);
+    border-top: 1px solid var(--line);
+  }
+  .sheet-foot .push { margin-right: auto; }
+  .icon-btn {
+    width: 38px; height: 38px;
+    flex: none;
+    display: grid; place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .icon-btn:hover { background: #f3ece3; color: var(--ink); }
+
+  /* ---------- form ---------- */
+  .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+  .field > .field-label, .field > span {
+    font-size: 13px;
+    font-weight: 650;
+    color: var(--ink-soft);
+    letter-spacing: .2px;
+  }
+  .field-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .field-head > span { font-size: 13px; font-weight: 650; color: var(--ink-soft); letter-spacing: .2px; }
+  .mini {
+    border: 0;
+    background: transparent;
+    padding: 3px 2px;
+    color: var(--brand);
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+  }
+  .mini:hover { color: var(--brand-dark); text-decoration: underline; }
+  .hint { margin: 0; font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  input[type="text"], input[type="search"], input:not([type]), textarea, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color .18s ease, box-shadow .18s ease;
+  }
+  input:focus, textarea:focus, select:focus {
+    border-color: #d3b294;
+    box-shadow: 0 0 0 4px rgba(194, 84, 42, .09);
+  }
+  textarea { resize: vertical; }
+  input::placeholder, textarea::placeholder { color: #b6a99e; }
+
+  .photo-picker {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 150px;
+    border: 1.5px dashed #dccbb8;
+    border-radius: 16px;
+    background: #fffaf4;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color .18s ease, background .18s ease;
+  }
+  .photo-picker:hover { border-color: #c9a987; background: #fff; }
+  .photo-picker img { display: block; width: 100%; max-height: 300px; object-fit: cover; }
+  .photo-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 26px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  .photo-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(45, 39, 34, .72);
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .photo-remove:hover { background: rgba(45, 39, 34, .9); }
+
+  .rows { display: flex; flex-direction: column; gap: 8px; }
+  .row { display: flex; align-items: center; gap: 8px; }
+  .row .row-name { flex: 1.35; }
+  .row .row-amt { flex: 1; }
+  .row-del {
+    width: 34px; height: 34px;
+    flex: none;
+    display: grid; place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .row-del:hover { color: var(--danger); border-color: #e7c3bd; background: #fdf3f1; }
+  .row-step { align-items: flex-start; }
+  .row-idx {
+    width: 26px; height: 26px;
+    flex: none;
+    margin-top: 8px;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .row-step textarea { flex: 1; min-height: 46px; overflow: hidden; }
+
+  /* ---------- detail ---------- */
+  .detail-sheet { position: relative; max-width: 720px; }
+  .detail-hero {
+    flex: none;
+    height: 280px;
+    background: linear-gradient(135deg, #f3e5d3, #e5d1b9);
+    position: relative;
+  }
+  .detail-hero img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .detail-hero .hero-ph {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: #c2ab90;
+  }
+  .detail-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 3;
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, .25);
+  }
+  .detail-body { padding: 22px 26px 26px; }
+  .detail-title { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .detail-title h2 { margin: 0; font-size: 24px; line-height: 1.3; word-break: break-word; }
+  .detail-sub { margin: 8px 0 22px; font-size: 13px; color: var(--muted); }
+  .detail-section { margin-bottom: 22px; }
+  .detail-section:last-child { margin-bottom: 0; }
+  .detail-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+  .detail-section h3::before {
+    content: "";
+    width: 4px; height: 14px;
+    border-radius: 2px;
+    background: var(--brand);
+  }
+  .detail-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .ing-list { list-style: none; margin: 0; padding: 0; }
+  .ing-list li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 14px;
+  }
+  .ing-list li:last-child { border-bottom: 0; }
+  .ing-list .amt { color: var(--muted); white-space: nowrap; font-size: 13px; }
+  .steps-list { list-style: none; margin: 0; padding: 0; }
+  .step-item { border-bottom: 1px dashed var(--line); }
+  .step-item:last-child { border-bottom: 0; }
+  .step-item label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 11px 0;
+    cursor: pointer;
+  }
+  .step-item input[type="checkbox"] {
+    flex: none;
+    width: 18px; height: 18px;
+    margin: 3px 0 0;
+    accent-color: var(--brand);
+    cursor: pointer;
+  }
+  .step-num {
+    flex: none;
+    width: 24px; height: 24px;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .step-text { font-size: 14.5px; line-height: 1.7; word-break: break-word; }
+  .step-item.done .step-text { color: var(--muted); text-decoration: line-through; }
+  .note-box {
+    padding: 12px 16px;
+    border: 1px solid #f0e2d0;
+    border-radius: 14px;
+    background: #fdf6ec;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* ---------- toast ---------- */
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(28px + env(safe-area-inset-bottom));
+    z-index: 100;
+    max-width: calc(100vw - 40px);
+    padding: 11px 20px;
+    border-radius: 999px;
+    background: rgba(45, 39, 34, .95);
+    color: #fff;
+    font-size: 13.5px;
+    line-height: 1.5;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 16px);
+    pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  .toast.error { background: #8f2f24; }
+
+  /* ---------- mobile bottom bar ---------- */
+  .mobile-bar { display: none; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 720px) {
+    body { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+
+    .header-actions { display: none; }
+    .header-inner { padding: 12px max(16px, env(safe-area-inset-right)) 12px max(16px, env(safe-area-inset-left)); gap: 10px; }
+    .brand h1 { font-size: 16px; }
+    .brand p { display: none; }
+    .brand-mark { width: 38px; height: 38px; border-radius: 12px; }
+    .toolbar { padding: 16px max(16px, env(safe-area-inset-right)) 4px max(16px, env(safe-area-inset-left)); gap: 12px; }
+    .list-area { padding: 2px max(16px, env(safe-area-inset-right)) 28px max(16px, env(safe-area-inset-left)); }
+    .footer { padding: 0 max(16px, env(safe-area-inset-right)) 20px max(16px, env(safe-area-inset-left)); }
+
+    /* 触控目标不小于 44px */
+    .btn { min-height: 44px; padding: 11px 18px; }
+    .icon-btn { width: 44px; height: 44px; }
+    .chip-btn { min-height: 44px; padding: 10px 16px; font-size: 13.5px; }
+    .sort-select { min-height: 44px; font-size: 16px; }
+    .mini { min-height: 44px; padding: 6px 2px; }
+    .row-del { width: 44px; height: 44px; font-size: 20px; }
+    .clear-btn { width: 40px; height: 40px; font-size: 20px; }
+    .photo-remove { min-height: 44px; padding: 8px 16px; font-size: 13px; }
+
+    /* 单列卡片 */
+    .grid { grid-template-columns: 1fr; gap: 12px; }
+    .card { flex-direction: row; align-items: stretch; }
+    .card:hover { transform: none; box-shadow: var(--shadow-sm); }
+    .card-media { width: 104px; flex: none; aspect-ratio: auto; min-height: 104px; }
+    .card-body { flex: 1; min-width: 0; justify-content: center; padding: 10px 14px; }
+    .card-body h3 { font-size: 16px; }
+
+    /* 全屏弹层 + 动态视口高度 */
+    .overlay { padding: 0; align-items: stretch; height: 100dvh; }
+    .sheet {
+      max-width: none;
+      height: 100vh;
+      max-height: 100vh;
+      border-radius: 0;
+    }
+    @supports (height: 100dvh) {
+      .sheet { height: 100dvh; max-height: 100dvh; }
+    }
+    .sheet-head { padding: calc(14px + env(safe-area-inset-top)) 18px 12px; }
+    .sheet-foot { padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); }
+    .detail-hero { height: 220px; }
+    .detail-close { top: calc(14px + env(safe-area-inset-top)); }
+    .detail-cols { grid-template-columns: 1fr; gap: 22px; }
+
+    /* 底部主操作栏 */
+    .mobile-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px max(12px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+      background: rgba(250, 246, 239, .94);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid rgba(231, 221, 207, .9);
+    }
+    .bar-btn {
+      flex: none;
+      width: 58px;
+      min-height: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      padding: 4px 6px;
+      border: 0;
+      border-radius: 12px;
+      background: transparent;
+      color: var(--ink-soft);
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+    .bar-btn:active { background: #efe6da; }
+    .bar-add { flex: 1; min-height: 48px; border-radius: 14px; font-size: 15px; gap: 8px; }
+
+    .toast { bottom: calc(96px + env(safe-area-inset-bottom)); }
+  }
+  @media (max-width: 520px) {
+    .footer-sep { display: none; }
+    .card-body { padding: 10px 12px; gap: 5px; }
+    .card-body h3 { font-size: 15px; }
+    .card-meta { font-size: 11px; gap: 6px; }
+    .card-meta .tag { font-size: 10.5px; padding: 2px 7px; }
+    .sheet-body { padding: 18px 18px 20px; }
+    .detail-body { padding: 18px 18px 22px; }
+    .detail-title h2 { font-size: 21px; }
+    .row .row-name, .row .row-amt { min-width: 0; }
+    .sort-select { padding-left: 12px; background-position: right 11px center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 11h16c0 4.4-3.6 8-8 8s-8-3.6-8-8Z"/>
+          <path d="M9 7.5c0-1 .8-1.5.8-2.5M14 7.5c0-1 .8-1.5.8-2.5"/>
+        </svg>
+      </span>
+      <div class="brand-text">
+        <h1>家庭菜谱收藏夹</h1>
+        <p>把家里的味道，好好收起来</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="btn ghost btn-compact" id="btnExport" title="导出全部菜谱备份">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/>
+        </svg>
+        <span class="btn-label">导出</span>
+      </button>
+      <button type="button" class="btn ghost btn-compact" id="btnImport" title="从备份文件导入">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 19h16"/>
+        </svg>
+        <span class="btn-label">导入</span>
+      </button>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+      <button type="button" class="btn primary" id="btnAdd" aria-label="添加菜谱">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+        <span class="btn-text">添加菜谱</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="banner" id="storageBanner" hidden>这个浏览器不允许网页保存数据，菜谱在关闭页面后会丢失。建议换用 Chrome / Edge 打开，或先导出备份。</div>
+  <div class="search-box">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/>
+    </svg>
+    <input id="searchInput" type="text" placeholder="搜索菜名、食材或调料…" autocomplete="off" aria-label="搜索菜谱">
+    <button type="button" class="clear-btn" id="searchClear" hidden aria-label="清空搜索">×</button>
+  </div>
+  <div class="toolbar-row">
+    <div class="chips" id="categoryChips" aria-label="分类筛选"></div>
+    <select id="sortSelect" class="sort-select" aria-label="排序方式">
+      <option value="recent">最近更新</option>
+      <option value="created">最近添加</option>
+      <option value="name">按菜名</option>
+    </select>
+  </div>
+</div>
+
+<main class="list-area">
+  <div class="result-bar"><span id="resultCount"></span></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="emptyState" hidden></div>
+</main>
+
+<footer class="footer">
+  <span id="storageInfo">正在加载…</span>
+  <span class="footer-sep">·</span>
+  <span>所有数据只保存在这台设备的浏览器中，不会上传</span>
+</footer>
+
+<!-- 详情 -->
+<div class="overlay" id="detailOverlay" hidden>
+  <div class="sheet detail-sheet" role="dialog" aria-modal="true" aria-label="菜谱详情">
+    <div class="detail-hero" id="detailHero"></div>
+    <button type="button" class="icon-btn detail-close" id="detailClose" aria-label="关闭">×</button>
+    <div class="sheet-body detail-body" id="detailBody"></div>
+    <div class="sheet-foot">
+      <button type="button" class="btn ghost danger" id="detailDelete">删除</button>
+      <span class="push"></span>
+      <button type="button" class="btn primary" id="detailEdit">编辑菜谱</button>
+    </div>
+  </div>
+</div>
+
+<!-- 添加 / 编辑 -->
+<div class="overlay" id="formOverlay" hidden>
+  <form class="sheet form-sheet" id="recipeForm" role="dialog" aria-modal="true" aria-labelledby="formTitle" autocomplete="off">
+    <div class="sheet-head">
+      <h2 id="formTitle">添加菜谱</h2>
+      <button type="button" class="icon-btn" id="formClose" aria-label="关闭">×</button>
+    </div>
+    <div class="sheet-body">
+      <label class="field">
+        <span class="field-label">菜名 *</span>
+        <input id="fName" type="text" maxlength="60" placeholder="例如：番茄炒蛋">
+      </label>
+
+      <label class="field">
+        <span class="field-label">分类</span>
+        <select id="fCategory"></select>
+      </label>
+
+      <div class="field">
+        <span class="field-label">成品照片</span>
+        <div class="photo-picker" id="photoPicker" role="button" tabindex="0" aria-label="选择成品照片">
+          <div class="photo-empty" id="photoEmpty">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="6" width="18" height="14" rx="3"/>
+              <circle cx="12" cy="13" r="3.6"/>
+              <path d="M9 6l1.2-2h3.6L15 6"/>
+            </svg>
+            <span>点击选择照片（JPG / PNG）</span>
+          </div>
+          <img id="photoPreview" alt="成品照片预览" hidden>
+          <button type="button" class="photo-remove" id="photoRemove" hidden>移除照片</button>
+        </div>
+        <input type="file" id="photoInput" accept="image/*" hidden>
+        <p class="hint">照片会自动压缩后保存在本机，方便照着做菜时查看。</p>
+      </div>
+
+      <div class="field">
+        <div class="field-head">
+          <span>食材</span>
+          <button type="button" class="mini" data-add="ingredient">+ 添加食材</button>
+        </div>
+        <div class="rows" id="ingredientRows"></div>
+      </div>
+
+      <div class="field">
+        <div class="field-head">
+          <span>调料与用量</span>
+          <button type="button" class="mini" data-add="seasoning">+ 添加调料</button>
+        </div>
+        <div class="rows" id="seasoningRows"></div>
+      </div>
+
+      <div class="field">
+        <div class="field-head">
+          <span>制作步骤</span>
+          <button type="button" class="mini" data-add="step">+ 添加步骤</button>
+        </div>
+        <div class="rows" id="stepRows"></div>
+      </div>
+
+      <label class="field">
+        <span class="field-label">小贴士（可选）</span>
+        <textarea id="fNote" rows="2" placeholder="例如：火候不要太大，出锅前尝一下咸淡"></textarea>
+      </label>
+    </div>
+    <div class="sheet-foot">
+      <button type="button" class="btn ghost" id="formCancel">取消</button>
+      <span class="push"></span>
+      <button type="submit" class="btn primary" id="formSave">保存菜谱</button>
+    </div>
+  </form>
+</div>
+
+<nav class="mobile-bar" aria-label="快捷操作">
+  <button type="button" class="bar-btn" id="barExport" aria-label="导出备份">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/>
+    </svg>
+    <span>导出</span>
+  </button>
+  <button type="button" class="bar-btn" id="barImport" aria-label="导入备份">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M4 19h16"/>
+    </svg>
+    <span>导入</span>
+  </button>
+  <button type="button" class="btn primary bar-add" id="barAdd">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+      <path d="M12 5v14M5 12h14"/>
+    </svg>
+    <span>添加菜谱</span>
+  </button>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;text-align:center;color:#8a3f1d">需要开启浏览器的 JavaScript 才能使用菜谱收藏夹。</p></noscript>
+
+<script>
+(function () {
+  'use strict';
+
+  var CATEGORIES = ['家常菜', '荤菜', '素菜', '汤羹', '主食', '早餐', '甜点', '其他'];
+  var LS_KEY = 'family-recipes-v1';
+  var DB_NAME = 'family-recipes';
+  var DB_STORE = 'recipes';
+
+  function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+
+  var els = {
+    grid: $('#grid'),
+    empty: $('#emptyState'),
+    resultCount: $('#resultCount'),
+    search: $('#searchInput'),
+    searchClear: $('#searchClear'),
+    chips: $('#categoryChips'),
+    sort: $('#sortSelect'),
+    storageInfo: $('#storageInfo'),
+    banner: $('#storageBanner'),
+    detailOverlay: $('#detailOverlay'),
+    detailHero: $('#detailHero'),
+    detailBody: $('#detailBody'),
+    detailEdit: $('#detailEdit'),
+    detailDelete: $('#detailDelete'),
+    detailClose: $('#detailClose'),
+    formOverlay: $('#formOverlay'),
+    form: $('#recipeForm'),
+    formTitle: $('#formTitle'),
+    formClose: $('#formClose'),
+    formCancel: $('#formCancel'),
+    fName: $('#fName'),
+    fCategory: $('#fCategory'),
+    fNote: $('#fNote'),
+    ingredientRows: $('#ingredientRows'),
+    seasoningRows: $('#seasoningRows'),
+    stepRows: $('#stepRows'),
+    photoPicker: $('#photoPicker'),
+    photoInput: $('#photoInput'),
+    photoPreview: $('#photoPreview'),
+    photoEmpty: $('#photoEmpty'),
+    photoRemove: $('#photoRemove'),
+    saveBtn: $('#formSave'),
+    toast: $('#toast'),
+    btnAdd: $('#btnAdd'),
+    btnExport: $('#btnExport'),
+    btnImport: $('#btnImport'),
+    barAdd: $('#barAdd'),
+    barExport: $('#barExport'),
+    barImport: $('#barImport'),
+    importFile: $('#importFile')
+  };
+
+  var state = {
+    recipes: [],
+    query: '',
+    category: '全部',
+    sort: 'recent',
+    editingId: null,
+    detailId: null,
+    photo: null
+  };
+
+  var db = null;
+  var storeMode = 'ls'; // 'idb' | 'ls' | 'none'
+  var lsOK = false;
+  var toastTimer = 0;
+
+  /* ================= 基础工具 ================= */
+
+  function uid() {
+    return 'r' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  }
+
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (ch) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+    });
+  }
+
+  function fmtDate(ts) {
+    var d = new Date(ts || Date.now());
+    if (isNaN(d.getTime())) return '';
+    return d.getFullYear() + '/' + String(d.getMonth() + 1).padStart(2, '0') + '/' + String(d.getDate()).padStart(2, '0');
+  }
+
+  function toast(msg, type) {
+    els.toast.textContent = msg;
+    els.toast.className = 'toast show' + (type === 'error' ? ' error' : '');
+    window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(function () {
+      els.toast.className = 'toast';
+    }, type === 'error' ? 4500 : 2400);
+  }
+
+  function dishIcon(size) {
+    return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M3 11h18c0 4.97-4.03 9-9 9s-9-4.03-9-9Z"/>' +
+      '<path d="M8 7c0-1.1.9-1.8.9-2.9M12 7c0-1.1.9-1.8.9-2.9M16 7c0-1.1.9-1.8.9-2.9"/>' +
+      '</svg>';
+  }
+
+  /* ================= 数据规范化 ================= */
+
+  function toPairs(list) {
+    if (!Array.isArray(list)) return [];
+    return list.map(function (item) {
+      if (typeof item === 'string') return { name: item.trim(), amount: '' };
+      if (item && typeof item === 'object') {
+        return { name: String(item.name || '').trim(), amount: String(item.amount || '').trim() };
+      }
+      return null;
+    }).filter(function (p) { return p && p.name; });
+  }
+
+  function normalizeRecipe(raw) {
+    if (!raw || typeof raw !== 'object') return null;
+    var name = String(raw.name || '').trim();
+    if (!name) return null;
+    return {
+      id: typeof raw.id === 'string' && raw.id ? raw.id : uid(),
+      name: name.slice(0, 60),
+      category: CATEGORIES.indexOf(raw.category) >= 0 ? raw.category : '其他',
+      photo: typeof raw.photo === 'string' && raw.photo.indexOf('data:image') === 0 ? raw.photo : null,
+      ingredients: toPairs(raw.ingredients),
+      seasonings: toPairs(raw.seasonings),
+      steps: Array.isArray(raw.steps) ? raw.steps.map(function (s) { return String(s).trim(); }).filter(Boolean) : [],
+      note: typeof raw.note === 'string' ? raw.note : '',
+      createdAt: Number(raw.createdAt) || Date.now(),
+      updatedAt: Number(raw.updatedAt) || Number(raw.createdAt) || Date.now()
+    };
+  }
+
+  /* ================= 本地存储层 ================= */
+
+  function testLS() {
+    try {
+      var k = '__recipe_ls_test__';
+      localStorage.setItem(k, '1');
+      localStorage.removeItem(k);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function openDB() {
+    return new Promise(function (resolve) {
+      if (!('indexedDB' in window)) return resolve(null);
+      var settled = false;
+      function finish(value) {
+        if (settled) {
+          if (value && typeof value.close === 'function') {
+            try { value.close(); } catch (e) {}
+          }
+          return;
+        }
+        settled = true;
+        resolve(value);
+      }
+      try {
+        var req = indexedDB.open(DB_NAME, 1);
+        req.onupgradeneeded = function () {
+          var d = req.result;
+          if (!d.objectStoreNames.contains(DB_STORE)) {
+            d.createObjectStore(DB_STORE, { keyPath: 'id' });
+          }
+        };
+        req.onsuccess = function () { finish(req.result); };
+        req.onerror = function () { finish(null); };
+        req.onblocked = function () { finish(null); };
+        window.setTimeout(function () { finish(null); }, 2500);
+      } catch (e) {
+        finish(null);
+      }
+    });
+  }
+
+  function idbAll() {
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction(DB_STORE, 'readonly');
+      var req = tx.objectStore(DB_STORE).getAll();
+      req.onsuccess = function () { resolve(req.result || []); };
+      req.onerror = function () { reject(req.error || new Error('读取失败')); };
+    });
+  }
+
+  function idbPut(recipe) {
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction(DB_STORE, 'readwrite');
+      tx.objectStore(DB_STORE).put(recipe);
+      tx.oncomplete = function () { resolve(); };
+      tx.onerror = function () { reject(tx.error || new Error('保存失败')); };
+      tx.onabort = function () { reject(tx.error || new Error('保存被中断')); };
+    });
+  }
+
+  function idbDelete(id) {
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction(DB_STORE, 'readwrite');
+      tx.objectStore(DB_STORE).delete(id);
+      tx.oncomplete = function () { resolve(); };
+      tx.onerror = function () { reject(tx.error || new Error('删除失败')); };
+      tx.onabort = function () { reject(tx.error || new Error('删除被中断')); };
+    });
+  }
+
+  function idbReplaceAll(list) {
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction(DB_STORE, 'readwrite');
+      var st = tx.objectStore(DB_STORE);
+      st.clear();
+      list.forEach(function (r) { st.put(r); });
+      tx.oncomplete = function () { resolve(); };
+      tx.onerror = function () { reject(tx.error || new Error('保存失败')); };
+      tx.onabort = function () { reject(tx.error || new Error('保存被中断')); };
+    });
+  }
+
+  function probeDB() {
+    return new Promise(function (resolve) {
+      var tx;
+      try {
+        tx = db.transaction(DB_STORE, 'readwrite');
+        tx.objectStore(DB_STORE).put({ id: '__probe__', name: 'probe' });
+      } catch (e) {
+        return resolve(false);
+      }
+      tx.oncomplete = function () {
+        idbDelete('__probe__').then(function () { resolve(true); }, function () { resolve(true); });
+      };
+      tx.onerror = function () { resolve(false); };
+      tx.onabort = function () { resolve(false); };
+    });
+  }
+
+  function readLS() {
+    if (!lsOK) return [];
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (!raw) return [];
+      var parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function writeLS() {
+    if (!lsOK) throw new Error('浏览器禁用了本地存储，无法保存数据');
+    localStorage.setItem(LS_KEY, JSON.stringify(state.recipes));
+  }
+
+  function isQuotaError(err) {
+    return !!err && (
+      err.name === 'QuotaExceededError' ||
+      err.name === 'NS_ERROR_DOM_QUOTA_REACHED' ||
+      err.code === 22 ||
+      err.code === 1014
+    );
+  }
+
+  function shrinkAllPhotos() {
+    var jobs = state.recipes.map(function (r) {
+      if (!r.photo) return Promise.resolve();
+      return recompressDataUrl(r.photo, 640, 0.55).then(function (url) {
+        r.photo = url;
+      }, function () { /* 忽略单张失败 */ });
+    });
+    return Promise.all(jobs);
+  }
+
+  function persistLS() {
+    try {
+      writeLS();
+      return Promise.resolve();
+    } catch (err) {
+      if (!isQuotaError(err)) return Promise.reject(new Error('保存失败：' + (err.message || '未知错误')));
+      return shrinkAllPhotos().then(function () {
+        try {
+          writeLS();
+        } catch (err2) {
+          throw new Error('本机存储空间已满。请删除部分菜谱、导出备份后清理，或换一张更小的照片。');
+        }
+      });
+    }
+  }
+
+  function persistUpsert(recipe) {
+    if (db) {
+      return idbPut(recipe).catch(function () {
+        db = null;
+        storeMode = 'ls';
+        return persistLS();
+      });
+    }
+    return persistLS();
+  }
+
+  function persistRemove(id) {
+    if (db) {
+      return idbDelete(id).catch(function () {
+        db = null;
+        storeMode = 'ls';
+        return persistLS();
+      });
+    }
+    return persistLS();
+  }
+
+  function persistAll() {
+    if (db) {
+      return idbReplaceAll(state.recipes).catch(function () {
+        db = null;
+        storeMode = 'ls';
+        return persistLS();
+      });
+    }
+    return persistLS();
+  }
+
+  async function openStorage() {
+    var handle = await openDB();
+    if (handle) {
+      db = handle;
+      var usable = await probeDB();
+      if (usable) {
+        try {
+          var rows = await idbAll();
+          state.recipes = rows
+            .filter(function (r) { return r && r.id !== '__probe__'; })
+            .map(normalizeRecipe)
+            .filter(Boolean);
+          storeMode = 'idb';
+        } catch (e) {
+          try { db.close(); } catch (e2) {}
+          db = null;
+        }
+      } else {
+        try { db.close(); } catch (e3) {}
+        db = null;
+      }
+    }
+
+    if (!db) {
+      if (lsOK) {
+        storeMode = 'ls';
+        state.recipes = readLS().map(normalizeRecipe).filter(Boolean);
+      } else {
+        storeMode = 'none';
+        state.recipes = [];
+      }
+      return;
+    }
+
+    // 从 localStorage 迁移旧数据到 IndexedDB
+    if (!state.recipes.length && lsOK) {
+      var legacy = readLS().map(normalizeRecipe).filter(Boolean);
+      if (legacy.length) {
+        state.recipes = legacy;
+        try {
+          await persistAll();
+          localStorage.removeItem(LS_KEY);
+        } catch (e4) { /* 迁移失败则保留原数据 */ }
+      }
+    }
+  }
+
+  function lsUsage() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      return raw ? new Blob([raw]).size : 0;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  /* ================= 图片处理 ================= */
+
+  function drawToJpeg(img, maxDim, quality) {
+    var w0 = img.naturalWidth || img.width;
+    var h0 = img.naturalHeight || img.height;
+    if (!w0 || !h0) throw new Error('图片尺寸异常');
+    var scale = Math.min(1, maxDim / Math.max(w0, h0));
+    var w = Math.max(1, Math.round(w0 * scale));
+    var h = Math.max(1, Math.round(h0 * scale));
+    var canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, w, h);
+    ctx.drawImage(img, 0, 0, w, h);
+    return canvas.toDataURL('image/jpeg', quality);
+  }
+
+  function compressFile(file) {
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function () {
+        try {
+          resolve(drawToJpeg(img, 900, 0.7));
+        } catch (e) {
+          reject(e);
+        } finally {
+          URL.revokeObjectURL(url);
+        }
+      };
+      img.onerror = function () {
+        URL.revokeObjectURL(url);
+        reject(new Error('这张图片浏览器无法读取，请换成 JPG / PNG 格式'));
+      };
+      img.src = url;
+    });
+  }
+
+  function recompressDataUrl(dataUrl, maxDim, quality) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      img.onload = function () {
+        try { resolve(drawToJpeg(img, maxDim, quality)); } catch (e) { reject(e); }
+      };
+      img.onerror = function () { reject(new Error('图片处理失败')); };
+      img.src = dataUrl;
+    });
+  }
+
+  /* ================= 筛选与渲染 ================= */
+
+  function visibleRecipes() {
+    var q = state.query.trim().toLowerCase();
+    var list = state.recipes.filter(function (r) {
+      if (state.category !== '全部' && r.category !== state.category) return false;
+      if (!q) return true;
+      var hay = [r.name, r.note]
+        .concat(r.ingredients.map(function (i) { return i.name; }))
+        .concat(r.seasonings.map(function (s) { return s.name; }))
+        .concat(r.steps)
+        .join(' ')
+        .toLowerCase();
+      return hay.indexOf(q) >= 0;
+    });
+
+    list.sort(function (a, b) {
+      if (state.sort === 'name') return a.name.localeCompare(b.name, 'zh-Hans-CN');
+      if (state.sort === 'created') return b.createdAt - a.createdAt;
+      return b.updatedAt - a.updatedAt;
+    });
+    return list;
+  }
+
+  function cardHTML(r) {
+    var media = r.photo
+      ? '<img src="' + r.photo + '" alt="' + esc(r.name) + '" loading="lazy" onerror="this.style.display=\'none\'">'
+      : '<div class="ph">' + dishIcon(44) + '</div>';
+    return '<article class="card" data-id="' + esc(r.id) + '" tabindex="0" role="button" aria-label="查看菜谱：' + esc(r.name) + '">' +
+      '<div class="card-media">' + media + '</div>' +
+      '<div class="card-body">' +
+        '<h3>' + esc(r.name) + '</h3>' +
+        '<div class="card-meta"><span class="tag">' + esc(r.category) + '</span>' +
+        '<span>' + r.ingredients.length + ' 种食材 · ' + r.steps.length + ' 步</span></div>' +
+      '</div>' +
+    '</article>';
+  }
+
+  function renderEmptyContent() {
+    var icon = '<div class="empty-icon">' + dishIcon(56) + '</div>';
+    if (!state.recipes.length) {
+      els.empty.innerHTML = icon +
+        '<h3>还没有收藏菜谱</h3>' +
+        '<p>把家里常做的菜记下来：菜名、食材、调料用量、做法步骤，还可以配一张成品照片，随时翻出来照着做。</p>' +
+        '<button type="button" class="btn primary" id="emptyAdd">添加第一道菜</button>';
+    } else {
+      els.empty.innerHTML = icon +
+        '<h3>没有找到匹配的菜谱</h3>' +
+        '<p>换个关键词试试，或者切换到「全部」分类看看。</p>' +
+        '<button type="button" class="btn ghost" id="emptyReset">清除筛选条件</button>';
+    }
+  }
+
+  function updateActiveChip() {
+    $$('.chip-btn', els.chips).forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-cat') === state.category);
+    });
+  }
+
+  function updateStorageInfo() {
+    var count = state.recipes.length;
+    if (storeMode === 'none') {
+      els.storageInfo.innerHTML = '<span class="warn">当前浏览器无法保存数据</span> · 关闭页面后菜谱会丢失';
+      return;
+    }
+    if (storeMode === 'idb') {
+      els.storageInfo.textContent = '已收藏 ' + count + ' 道菜 · 保存在本机浏览器数据库中';
+      return;
+    }
+    var bytes = lsUsage();
+    if (!bytes && count) {
+      try { bytes = new Blob([JSON.stringify(state.recipes)]).size; } catch (e) { bytes = 0; }
+    }
+    var mb = bytes / 1048576;
+    var pct = Math.min(100, bytes / (5 * 1048576) * 100);
+    var text = '已收藏 ' + count + ' 道菜 · 本地存储约 ' + (mb < 0.1 && count ? '0.1' : mb.toFixed(1)) + ' MB / 5 MB';
+    els.storageInfo.innerHTML = pct > 80
+      ? '<span class="warn">' + text + '，空间紧张，建议先导出备份</span>'
+      : esc(text);
+  }
+
+  function render() {
+    var list = visibleRecipes();
+    els.grid.innerHTML = list.map(cardHTML).join('');
+    els.empty.hidden = list.length > 0;
+    if (!list.length) renderEmptyContent();
+
+    if (!list.length) {
+      els.resultCount.textContent = '';
+    } else if (list.length === state.recipes.length) {
+      els.resultCount.textContent = '共 ' + list.length + ' 道菜';
+    } else {
+      els.resultCount.textContent = '找到 ' + list.length + ' 道菜';
+    }
+
+    updateActiveChip();
+    updateStorageInfo();
+  }
+
+  /* ================= 详情 ================= */
+
+  function openDetail(id) {
+    var r = state.recipes.find(function (x) { return x.id === id; });
+    if (!r) return;
+    state.detailId = id;
+    renderDetail(r);
+    showOverlay(els.detailOverlay);
+    els.detailBody.scrollTop = 0;
+  }
+
+  function renderDetail(r) {
+    if (r.photo) {
+      els.detailHero.innerHTML = '<img src="' + r.photo + '" alt="' + esc(r.name) + '" onerror="this.style.display=\'none\'">';
+    } else {
+      els.detailHero.innerHTML = '<div class="hero-ph">' + dishIcon(72) + '</div>';
+    }
+
+    var subs = [];
+    if (r.ingredients.length) subs.push(r.ingredients.length + ' 种食材');
+    if (r.seasonings.length) subs.push(r.seasonings.length + ' 种调料');
+    if (r.steps.length) subs.push(r.steps.length + ' 个步骤');
+    subs.push('更新于 ' + fmtDate(r.updatedAt));
+
+    var html = '<div class="detail-title"><h2>' + esc(r.name) + '</h2><span class="tag">' + esc(r.category) + '</span></div>' +
+      '<p class="detail-sub">' + esc(subs.join(' · ')) + '</p>';
+
+    if (r.ingredients.length || r.seasonings.length) {
+      html += '<div class="detail-cols">';
+      if (r.ingredients.length) html += listSection('食材', r.ingredients);
+      if (r.seasonings.length) html += listSection('调料', r.seasonings);
+      html += '</div>';
+    }
+
+    if (r.steps.length) {
+      html += '<div class="detail-section"><h3>制作步骤</h3><ol class="steps-list">' +
+        r.steps.map(function (step, i) {
+          return '<li class="step-item"><label>' +
+            '<input type="checkbox" aria-label="标记第 ' + (i + 1) + ' 步完成">' +
+            '<span class="step-num">' + (i + 1) + '</span>' +
+            '<span class="step-text">' + esc(step) + '</span>' +
+          '</label></li>';
+        }).join('') +
+      '</ol></div>';
+    }
+
+    if (r.note) {
+      html += '<div class="detail-section"><h3>小贴士</h3><div class="note-box">' + esc(r.note) + '</div></div>';
+    }
+
+    if (!r.ingredients.length && !r.seasonings.length && !r.steps.length && !r.note) {
+      html += '<p class="hint">这道菜还没有填写食材和步骤，点下方「编辑菜谱」补充吧。</p>';
+    }
+
+    els.detailBody.innerHTML = html;
+  }
+
+  function listSection(title, items) {
+    return '<div class="detail-section"><h3>' + title + '</h3><ul class="ing-list">' +
+      items.map(function (item) {
+        return '<li><span>' + esc(item.name) + '</span><span class="amt">' + esc(item.amount || '适量') + '</span></li>';
+      }).join('') +
+    '</ul></div>';
+  }
+
+  /* ================= 表单 ================= */
+
+  function buildCategorySelect() {
+    els.fCategory.innerHTML = CATEGORIES.map(function (c) {
+      return '<option value="' + c + '">' + c + '</option>';
+    }).join('');
+  }
+
+  function appendRow(container, kind, value) {
+    var row = document.createElement('div');
+    row.className = 'row' + (kind === 'step' ? ' row-step' : '');
+
+    if (kind === 'step') {
+      row.innerHTML = '<span class="row-idx"></span>' +
+        '<textarea rows="1" placeholder="例如：热锅冷油，下葱花爆香"></textarea>' +
+        '<button type="button" class="row-del" aria-label="删除这一步">×</button>';
+      var ta = row.querySelector('textarea');
+      ta.value = value || '';
+      container.appendChild(row);
+      autoGrow(ta);
+    } else {
+      var namePh = kind === 'ingredient' ? '食材，如 五花肉' : '调料，如 生抽';
+      var amtPh = kind === 'ingredient' ? '用量，如 300g' : '用量，如 2勺';
+      row.innerHTML = '<input class="row-name" type="text" placeholder="' + namePh + '" aria-label="' + (kind === 'ingredient' ? '食材名称' : '调料名称') + '">' +
+        '<input class="row-amt" type="text" placeholder="' + amtPh + '" aria-label="用量">' +
+        '<button type="button" class="row-del" aria-label="删除这一项">×</button>';
+      row.querySelector('.row-name').value = value && value.name ? value.name : '';
+      row.querySelector('.row-amt').value = value && value.amount ? value.amount : '';
+      container.appendChild(row);
+    }
+    renumberSteps();
+  }
+
+  function renumberSteps() {
+    $$('.row-idx', els.stepRows).forEach(function (el, i) {
+      el.textContent = String(i + 1);
+    });
+  }
+
+  function autoGrow(ta) {
+    if (!ta) return;
+    ta.style.height = 'auto';
+    ta.style.height = Math.min(ta.scrollHeight, 260) + 'px';
+  }
+
+  function readPairs(container) {
+    return $$('.row', container).map(function (row) {
+      var nameEl = row.querySelector('.row-name');
+      var amtEl = row.querySelector('.row-amt');
+      return {
+        name: nameEl ? nameEl.value.trim() : '',
+        amount: amtEl ? amtEl.value.trim() : ''
+      };
+    }).filter(function (p) { return p.name; });
+  }
+
+  function readSteps() {
+    return $$('textarea', els.stepRows).map(function (ta) {
+      return ta.value.trim();
+    }).filter(Boolean);
+  }
+
+  function updatePhotoUI() {
+    if (state.photo) {
+      els.photoPreview.src = state.photo;
+      els.photoPreview.hidden = false;
+      els.photoEmpty.hidden = true;
+      els.photoRemove.hidden = false;
+    } else {
+      els.photoPreview.hidden = true;
+      els.photoPreview.removeAttribute('src');
+      els.photoEmpty.hidden = false;
+      els.photoRemove.hidden = true;
+    }
+  }
+
+  function openForm(recipe) {
+    state.editingId = recipe ? recipe.id : null;
+    state.photo = recipe ? (recipe.photo || null) : null;
+
+    els.formTitle.textContent = recipe ? '编辑菜谱' : '添加菜谱';
+    els.fName.value = recipe ? recipe.name : '';
+    els.fCategory.value = recipe
+      ? recipe.category
+      : (CATEGORIES.indexOf(state.category) >= 0 ? state.category : '家常菜');
+    els.fNote.value = recipe ? (recipe.note || '') : '';
+
+    els.ingredientRows.innerHTML = '';
+    els.seasoningRows.innerHTML = '';
+    els.stepRows.innerHTML = '';
+
+    var ings = recipe && recipe.ingredients.length ? recipe.ingredients : [null];
+    ings.forEach(function (item) { appendRow(els.ingredientRows, 'ingredient', item); });
+
+    var seas = recipe && recipe.seasonings.length ? recipe.seasonings : [null];
+    seas.forEach(function (item) { appendRow(els.seasoningRows, 'seasoning', item); });
+
+    var steps = recipe && recipe.steps.length ? recipe.steps : [''];
+    steps.forEach(function (s) { appendRow(els.stepRows, 'step', s); });
+
+    updatePhotoUI();
+    showOverlay(els.formOverlay);
+    if (window.innerWidth > 720) {
+      window.setTimeout(function () { els.fName.focus(); }, 120);
+    }
+  }
+
+  function closeForm() {
+    closeOverlay(els.formOverlay);
+    state.editingId = null;
+    state.photo = null;
+    els.saveBtn.disabled = false;
+    els.saveBtn.textContent = '保存菜谱';
+    els.form.reset();
+  }
+
+  function collectForm() {
+    return {
+      name: els.fName.value.trim(),
+      category: els.fCategory.value,
+      photo: state.photo,
+      ingredients: readPairs(els.ingredientRows),
+      seasonings: readPairs(els.seasoningRows),
+      steps: readSteps(),
+      note: els.fNote.value.trim()
+    };
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    var name = els.fName.value.trim();
+    if (!name) {
+      toast('请先填写菜名', 'error');
+      els.fName.focus();
+      return;
+    }
+
+    var payload = collectForm();
+    var existing = state.editingId
+      ? state.recipes.find(function (r) { return r.id === state.editingId; })
+      : null;
+    var now = Date.now();
+    var recipe;
+    if (existing) {
+      recipe = Object.assign({}, existing, payload, { updatedAt: now });
+    } else {
+      recipe = Object.assign({ id: uid(), createdAt: now, updatedAt: now }, payload);
+    }
+
+    var snapshot = state.recipes.slice();
+    var idx = state.recipes.findIndex(function (r) { return r.id === recipe.id; });
+    if (idx >= 0) state.recipes[idx] = recipe;
+    else state.recipes.unshift(recipe);
+
+    els.saveBtn.disabled = true;
+    els.saveBtn.textContent = '保存中…';
+    try {
+      await persistUpsert(recipe);
+      closeForm();
+      render();
+      if (existing) openDetail(recipe.id);
+      toast(existing ? '菜谱已更新' : '菜谱已保存');
+    } catch (err) {
+      state.recipes = snapshot;
+      render();
+      toast(err.message || '保存失败，请重试', 'error');
+    } finally {
+      els.saveBtn.disabled = false;
+      els.saveBtn.textContent = '保存菜谱';
+    }
+  }
+
+  /* ================= 备份 ================= */
+
+  function stamp() {
+    var d = new Date();
+    return '' + d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0');
+  }
+
+  function exportBackup() {
+    if (!state.recipes.length) {
+      toast('还没有菜谱可以导出');
+      return;
+    }
+    var data = {
+      type: 'family-recipes',
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      recipes: state.recipes
+    };
+    var blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    var filename = '家庭菜谱备份-' + stamp() + '.json';
+
+    // iOS Safari：优先调用系统分享，可「存储到文件」或 AirDrop
+    try {
+      if (navigator.canShare && typeof File === 'function') {
+        var file = new File([blob], filename, { type: 'application/json' });
+        if (navigator.canShare({ files: [file] })) {
+          navigator.share({ files: [file], title: '家庭菜谱备份' }).then(function () {
+            toast('备份已导出');
+          }, function (err) {
+            if (err && err.name === 'AbortError') return;
+            downloadBlob(blob, filename);
+          });
+          return;
+        }
+      }
+    } catch (e) { /* 分享不可用则走下载 */ }
+
+    downloadBlob(blob, filename);
+  }
+
+  function downloadBlob(blob, filename) {
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+    toast('已导出 ' + state.recipes.length + ' 道菜的备份');
+  }
+
+  function readFileText(file) {
+    if (file && typeof file.text === 'function') return file.text();
+    return new Promise(function (resolve, reject) {
+      var reader = new FileReader();
+      reader.onload = function () { resolve(String(reader.result || '')); };
+      reader.onerror = function () { reject(new Error('读取文件失败')); };
+      reader.readAsText(file);
+    });
+  }
+
+  async function importBackup(file) {
+    var text = await readFileText(file);
+    var parsed = JSON.parse(text);
+    var list = Array.isArray(parsed) ? parsed : parsed && parsed.recipes;
+    if (!Array.isArray(list)) throw new Error('文件内容不是有效的菜谱备份');
+
+    var valid = list.map(normalizeRecipe).filter(Boolean);
+    if (!valid.length) throw new Error('备份里没有可导入的菜谱');
+
+    var added = 0;
+    var updated = 0;
+    valid.forEach(function (rec) {
+      var i = state.recipes.findIndex(function (r) { return r.id === rec.id; });
+      if (i >= 0) {
+        state.recipes[i] = rec;
+        updated++;
+      } else {
+        state.recipes.push(rec);
+        added++;
+      }
+    });
+
+    await persistAll();
+    render();
+    toast('导入完成：新增 ' + added + ' 道，更新 ' + updated + ' 道');
+  }
+
+  /* ================= 弹层通用 ================= */
+
+  function showOverlay(el) {
+    el.hidden = false;
+    document.body.classList.add('modal-open');
+  }
+
+  function closeOverlay(el) {
+    el.hidden = true;
+    if (!$$('.overlay').some(function (ov) { return !ov.hidden; })) {
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  /* ================= 事件绑定 ================= */
+
+  function bindEvents() {
+    els.btnAdd.addEventListener('click', function () { openForm(null); });
+    els.barAdd.addEventListener('click', function () { openForm(null); });
+    els.barExport.addEventListener('click', exportBackup);
+    els.barImport.addEventListener('click', function () { els.importFile.click(); });
+    els.formClose.addEventListener('click', closeForm);
+    els.formCancel.addEventListener('click', closeForm);
+    els.form.addEventListener('submit', handleSubmit);
+
+    els.detailClose.addEventListener('click', function () { closeOverlay(els.detailOverlay); });
+    els.detailEdit.addEventListener('click', function () {
+      var r = state.recipes.find(function (x) { return x.id === state.detailId; });
+      if (!r) return;
+      closeOverlay(els.detailOverlay);
+      openForm(r);
+    });
+    els.detailDelete.addEventListener('click', async function () {
+      var r = state.recipes.find(function (x) { return x.id === state.detailId; });
+      if (!r) return;
+      if (!window.confirm('确定删除「' + r.name + '」吗？删除后无法恢复。')) return;
+      var snapshot = state.recipes.slice();
+      state.recipes = state.recipes.filter(function (x) { return x.id !== r.id; });
+      try {
+        await persistRemove(r.id);
+        closeOverlay(els.detailOverlay);
+        render();
+        toast('已删除「' + r.name + '」');
+      } catch (err) {
+        state.recipes = snapshot;
+        render();
+        toast(err.message || '删除失败，请重试', 'error');
+      }
+    });
+
+    els.detailBody.addEventListener('change', function (e) {
+      var input = e.target;
+      if (input && input.matches && input.matches('input[type="checkbox"]')) {
+        var item = input.closest('.step-item');
+        if (item) item.classList.toggle('done', input.checked);
+      }
+    });
+
+    els.search.addEventListener('input', function () {
+      state.query = els.search.value;
+      els.searchClear.hidden = !els.search.value;
+      render();
+    });
+    els.searchClear.addEventListener('click', function () {
+      els.search.value = '';
+      state.query = '';
+      els.searchClear.hidden = true;
+      els.search.focus();
+      render();
+    });
+
+    els.chips.addEventListener('click', function (e) {
+      var btn = e.target.closest('.chip-btn');
+      if (!btn) return;
+      state.category = btn.getAttribute('data-cat');
+      render();
+    });
+
+    els.sort.addEventListener('change', function () {
+      state.sort = els.sort.value;
+      render();
+    });
+
+    els.grid.addEventListener('click', function (e) {
+      var card = e.target.closest('.card');
+      if (card) openDetail(card.getAttribute('data-id'));
+    });
+    els.grid.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var card = e.target.closest ? e.target.closest('.card') : null;
+      if (card) {
+        e.preventDefault();
+        openDetail(card.getAttribute('data-id'));
+      }
+    });
+
+    els.empty.addEventListener('click', function (e) {
+      if (e.target.closest('#emptyAdd')) openForm(null);
+      if (e.target.closest('#emptyReset')) {
+        state.query = '';
+        state.category = '全部';
+        els.search.value = '';
+        els.searchClear.hidden = true;
+        render();
+      }
+    });
+
+    // 照片
+    els.photoPicker.addEventListener('click', function (e) {
+      if (e.target.closest('#photoRemove')) return;
+      els.photoInput.click();
+    });
+    els.photoPicker.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        els.photoInput.click();
+      }
+    });
+    els.photoRemove.addEventListener('click', function (e) {
+      e.stopPropagation();
+      state.photo = null;
+      updatePhotoUI();
+    });
+    els.photoInput.addEventListener('change', async function () {
+      var file = els.photoInput.files && els.photoInput.files[0];
+      if (!file) return;
+      if (file.type.indexOf('image/') !== 0) {
+        toast('请选择图片文件', 'error');
+        els.photoInput.value = '';
+        return;
+      }
+      els.photoEmpty.textContent = '正在处理照片…';
+      try {
+        state.photo = await compressFile(file);
+        updatePhotoUI();
+      } catch (err) {
+        toast(err.message || '照片处理失败', 'error');
+      } finally {
+        els.photoInput.value = '';
+        els.photoEmpty.innerHTML = '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+          '<rect x="3" y="6" width="18" height="14" rx="3"/><circle cx="12" cy="13" r="3.6"/><path d="M9 6l1.2-2h3.6L15 6"/></svg>' +
+          '<span>点击选择照片（JPG / PNG）</span>';
+      }
+    });
+
+    // 动态行
+    document.addEventListener('click', function (e) {
+      var addBtn = e.target.closest('[data-add]');
+      if (addBtn) {
+        var kind = addBtn.getAttribute('data-add');
+        if (kind === 'ingredient') appendRow(els.ingredientRows, 'ingredient', null);
+        if (kind === 'seasoning') appendRow(els.seasoningRows, 'seasoning', null);
+        if (kind === 'step') appendRow(els.stepRows, 'step', '');
+        return;
+      }
+      var del = e.target.closest('.row-del');
+      if (del) {
+        var row = del.closest('.row');
+        if (row) {
+          row.remove();
+          renumberSteps();
+        }
+      }
+    });
+
+    els.stepRows.addEventListener('input', function (e) {
+      if (e.target.tagName === 'TEXTAREA') autoGrow(e.target);
+    });
+
+    // 备份
+    els.btnExport.addEventListener('click', exportBackup);
+    els.btnImport.addEventListener('click', function () { els.importFile.click(); });
+    els.importFile.addEventListener('change', async function () {
+      var file = els.importFile.files && els.importFile.files[0];
+      if (!file) return;
+      if (state.recipes.length && !window.confirm('导入会把备份中的菜谱合并进来（同一条记录会被覆盖），继续吗？')) {
+        els.importFile.value = '';
+        return;
+      }
+      try {
+        await importBackup(file);
+      } catch (err) {
+        toast(err.message || '导入失败，请检查备份文件', 'error');
+      } finally {
+        els.importFile.value = '';
+      }
+    });
+
+    // 弹层背景点击 / Esc
+    [els.detailOverlay, els.formOverlay].forEach(function (ov) {
+      ov.addEventListener('click', function (e) {
+        if (e.target === ov) {
+          if (ov === els.formOverlay) closeForm();
+          else closeOverlay(ov);
+        }
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        if (!els.formOverlay.hidden) {
+          closeForm();
+        } else if (!els.detailOverlay.hidden) {
+          closeOverlay(els.detailOverlay);
+        }
+      }
+    });
+  }
+
+  /* ================= 启动 ================= */
+
+  async function init() {
+    buildCategorySelect();
+    els.chips.innerHTML = ['全部'].concat(CATEGORIES).map(function (c) {
+      return '<button type="button" class="chip-btn" data-cat="' + c + '">' + c + '</button>';
+    }).join('');
+    bindEvents();
+
+    lsOK = testLS();
+    await openStorage();
+    render();
+    els.banner.hidden = storeMode !== 'none';
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
